@@ -1,0 +1,52 @@
+package vectorstack;
+
+import java.io.FileInputStream;
+
+public class Test {
+
+	public static void main(String[] args) {
+		 //checked exception  or  compile time exception
+		try
+		{
+			FileInputStream fis = new FileInputStream("d:/abc.txt");
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		System.out.println("hello");
+		
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");
+		}
+		catch(ClassNotFoundException e)
+		{
+			System.out.println(e);
+		}
+
+		System.out.println("hello");
+		
+		//unchecked exception  or run time exception  ( compiler  was unable to check the exception
+	
+		int a=100 , b=2 ,c;
+		try {
+			c = a/b;
+			
+		System.out.println(c);
+		} 
+		catch(ArithmeticException e)       
+		//catch(Exception e)
+		{
+			 System.out.println(e);
+
+				System.out.println("\t you can not divide by zero");
+		}
+		
+		/*String name=null;
+		System.out.println(name.length());
+		*/
+		
+	}
+
+}
